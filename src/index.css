@@ -8,12 +8,14 @@ body {
 }
 
 .flashcards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .flashcards div {
+  flex: 1 0 calc(33.333% - 20px); /* Set flex-basis to 33.333% (minus gap) for three columns */
+
   border: 1px solid #e7e7e7;
   background-color: #f7f7f7;
   border-radius: 7px;
